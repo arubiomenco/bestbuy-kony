@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pxsObject>
+    <appSmsCode></appSmsCode>
+    <plainxmlservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <group>Best Buy</group>
+        <httpmethod>GET</httpmethod>
+        <id>BBReviews</id>
+        <ignoreProxy>false</ignoreProxy>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>revCriteria</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>(sku=8224045)</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>apiKey</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>uuqftajjhrw8e6hpfamrqtzv</testvalue>
+            <value></value>
+        </inparam>
+        <intemplate></intemplate>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <outtemplate>&lt;?xml-stylesheet href="/v1/xsl/xml_pretty_printer.xsl" type="text/xsl"?&gt;&lt;reviews canonicalUrl="/v1/reviews(sku=8224045)?apiKey=uuqftajjhrw8e6hpfamrqtzv" currentPage="1" from="1" partial="false" queryTime="0.003" to="10" total="568" totalPages="57" totalTime="0.010"&gt;
+   &lt;review&gt;
+      &lt;id&gt;20732185&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;TaoLV&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;5.0&lt;/rating&gt;
+      &lt;title&gt;Great TV&lt;/title&gt;
+      &lt;comment&gt;Yet another wonderful samsung product. My 3rd one already. Looks good off as it does on. Great picture quality, nice refresh rate, vibrant colors &amp;amp;amp; great abilities to connect to almost everthing.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-29T23:42:18&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20729502&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;Elroy1&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;4.0&lt;/rating&gt;
+      &lt;title&gt;Samsung 55 inch LED HD TV&lt;/title&gt;
+      &lt;comment&gt;I purchased the Samsung 55" HD Smart TV and have been nothing short of impressed by the HD picture quality. The Smart TV is so much more than a television now. The ability to stream video from NetFlix and Amazon Prime is a truly awesome feature and the ability to go online is very convenient. Admittedly the Remote Control takes some getting used to. I still have not mastered the technique to enter a specific channel. It is not exactly intuitive. The TV sound quality is perhaps the one shortcoming with this TV. It does not have much in the way of speaker depth and size with the low profile practically flat (Less than 2 inch profile). The low profile depth makes it ideal for a wall mount installation and the multiple HDMI inputs make it a superior choice for the true appreciator of high definition video. The 3D capability is functional but not used frequently since there are limited videos and movies offered with this format. Other than that the TV has been as advertised and the Black Friday deal made it a great value.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-29T13:17:18&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20719373&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;Hojo1&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;5.0&lt;/rating&gt;
+      &lt;title&gt;Great TV, well worth the price&lt;/title&gt;
+      &lt;comment&gt;Great TV, beautiful picture, lots of cool built-in apps. Setup was a complete breeze when connected to the Internet and my cablebox. I thought that I would have to leave the TV on channel 3 (or a specific input source) and use the stupid overpriced cablebox to change channels... not the case. I connect the cablebox via coax &amp;amp;amp; HDMI, and somehow unexpectedly the TV and its remote worked everything the cablebox once afforded. All of the special capabilities that are available on the TV can be used without being tied to the cablebox. My previous Mitsubishi TV did not have that ability. I was forced to leave it on channel 3, and use the box to change channels, and I was not able to use the built-in picture-in-picture (or split screen features) that the TV was capable of performing).
+
+This Samsung TV, once connected to my home network, immediately downloaded the latest firmware, allowed me to setup an online account and register the device. The TV immediately recognized my DLNA devices on my network, and provided great transfer rates over my Gig Ethernet network. My only gripe with the streaming capabilities of this TV is that is will NOT properly recognize and play DVD formatted files/folders (i.e. ifo, bup, vob). So all of my home grown home-videos need to be converted to a compressed video format in order to be streamed (ie. avi). It would be nice if Samsung would provide a software update to allow the TV to play like a true media player (i.e. Hornettek, Popcorn Hour, Argosy). I have contacted them a couple of months ago about this capability, but no response as of yet.
+
+Be forewarned, that this TV has many capabilities... so there is a lot to learn with all of the special features. Basic operation is a breeze... but once you delve into features such as the use of the 2D &amp;amp;amp; 3D, and the voice control capabilities, it might take a bit to understand/master.
+
+Overall, great TV... definitely recommend the purchase.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-29T06:41:27&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20715406&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;Jollyboy&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;5.0&lt;/rating&gt;
+      &lt;title&gt;The best TV by far! You can't beat 240Hz refresher&lt;/title&gt;
+      &lt;comment&gt;I've had this TV from when it first came out (price was waaay higher than what it's being offered now), still enjoying it and is by far, still the best TV out there! I highly recommend getting this TV especially now that the price has been reduced.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-28T15:33:06&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20689155&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;CD12&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;4.0&lt;/rating&gt;
+      &lt;title&gt;This tv was too smart for me&lt;/title&gt;
+      &lt;comment&gt;I'm limited on internet so the internet connection would use my data too fast. You had to be connected to use certain features. I thought speaking to it was fun. It just didn't understand what I was saying half the time. The glasses we could never tell if they were on or not. It also didn't turn on a reg program that was not 3d to our liking. We like passive to active 3 d. The picture was great though. This tv was great just not right for us. Also when talking to it you had to have the background quite.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-27T11:42:17&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20679406&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;MarkAW&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;5.0&lt;/rating&gt;
+      &lt;title&gt;Easy set up and great picture&lt;/title&gt;
+      &lt;comment&gt;This wasn't the tv we were planning to buy, but it has everything. 3D, Internet, and great picture quality. We very happy with the purchase. If there is an issue it's with the audio. It's not horrible, but since we are adding a surround sound system I won't need to worry about it for long.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-26T20:40:07&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20678780&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;axeldog11&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;5.0&lt;/rating&gt;
+      &lt;title&gt;best tv ever&lt;/title&gt;
+      &lt;comment&gt;bestg tv ever, perfect quality, perfect picture, perfect sound&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-26T18:53:52&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20666004&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;bliz1&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;5.0&lt;/rating&gt;
+      &lt;title&gt;Easy to set up&lt;/title&gt;
+      &lt;comment&gt;Incredible picture and like the smart features. Easy to set up &amp;amp;amp; use.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-25T20:56:12&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20663464&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;Joeeeeeeee&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;5.0&lt;/rating&gt;
+      &lt;title&gt;Great TV&lt;/title&gt;
+      &lt;comment&gt;Great TV. Everything worked out of the box. Hardest part was to move the television on top of the furniture.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-25T15:17:41&lt;/submissionTime&gt;
+   &lt;/review&gt;
+   &lt;review&gt;
+      &lt;id&gt;20662456&lt;/id&gt;
+      &lt;sku&gt;8224045&lt;/sku&gt;
+      &lt;reviewer&gt;
+         &lt;name&gt;hoops101&lt;/name&gt;
+      &lt;/reviewer&gt;
+      &lt;aboutMe/&gt;
+      &lt;rating&gt;5.0&lt;/rating&gt;
+      &lt;title&gt;Amazing tv, the best I've ever owned by far.&lt;/title&gt;
+      &lt;comment&gt;I will buy Samsung every time. this t.v. is a great purchase. Hang it on the wall because the stand is just OK and is not the most stable. The audio is not great so get a sound bar.&lt;/comment&gt;
+      &lt;submissionTime&gt;2014-01-25T13:34:49&lt;/submissionTime&gt;
+   &lt;/review&gt;
+&lt;/reviews&gt;
+</outtemplate>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>reviews</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//reviews</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>reviewer</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>review/reviewer/name</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>reviews</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>number</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>rating</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>review/rating</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>reviews</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>title</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>review/title</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>reviews</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>comment</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>review/comment</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>reviews</value>
+        </outparam>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <timeout></timeout>
+        <url>http://api.remix.bestbuy.com/v1/reviews$revCriteria?apiKey=$apiKey</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+    </plainxmlservice>
+</pxsObject>

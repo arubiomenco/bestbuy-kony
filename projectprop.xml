@@ -1,0 +1,22 @@
+<properties>
+    <attributes name="project.type" value="js"/>
+    <attributes name="appversionkey" value="1.0.0"/>
+    <attributes name="winmangotiletitlekey" value="BestBuyKony"/>
+    <attributes name="mwportkey" value="80"/>
+    <attributes name="andtargetsdkkey" value="2.3.3"/>
+    <attributes name="isNewAppWithRespectToAndroidPackageName" value="true"/>
+    <attributes name="mwaddrkey" value="192.168.2.1"/>
+    <attributes name="iphonebundleidentifierkey" value="com.kony.BestBuyKony"/>
+    <attributes name="createdgaversion" value="5.5.0"/>
+    <attributes name="build" value="debug"/>
+    <attributes name="appidkey" value="BestBuyKony"/>
+    <attributes name="currentgaversion" value="5.5.1.GA_v201401031652"/>
+    <attributes name="mwhttpsportkey" value="443"/>
+    <attributes name="apppackagekey" value="com.orgname.BestBuyKony"/>
+    <attributes name="startupformkey" value="FrmHome"/>
+    <attributes name="vendornamekey" value="KonyLabs"/>
+    <attributes name="appnamekey" value="BestBuyKony"/>
+    <attributes name="APPLICATION_THEME" value="default"/>
+    <attributes name="win6xj2meonlysupported" value="false"/>
+    <attributes name="SELECTED_THEME" value="default"/>
+</properties>
