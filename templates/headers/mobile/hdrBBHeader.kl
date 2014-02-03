@@ -791,7 +791,7 @@
                 <width>100</width>
                 <height>12</height>
             </sizePercent>
-            <skinId>Skin Defaults</skinId>
+            <skinId>sknHbBackground</skinId>
             <focusSkinId>Skin Defaults</focusSkinId>
             <localeId>None</localeId>
             <visible>true</visible>
@@ -1434,11 +1434,11 @@
                     <y>1</y>
                 </location>
                 <size>
-                    <width>88</width>
+                    <width>50</width>
                     <height>50</height>
                 </size>
                 <sizePercent>
-                    <width>20</width>
+                    <width>11</width>
                     <height>100</height>
                 </sizePercent>
                 <skinId>sknBtnBack</skinId>
@@ -2024,7 +2024,7 @@
                 </paddings>
                 <SText></SText>
                 <overridePerferred>
-                    <width>true</width>
+                    <width>false</width>
                     <height>false</height>
                 </overridePerferred>
                 <contentAlign>3</contentAlign>
@@ -2088,7 +2088,7 @@
                 <desktopWebToolTip></desktopWebToolTip>
                 <desktop_hoverskin>Skin Defaults</desktop_hoverskin>
                 <displayText>true</displayText>
-                <pressedSkin>Skin Defaults</pressedSkin>
+                <pressedSkin>sknBtnBackP</pressedSkin>
                 <blockedSkin>Skin Defaults</blockedSkin>
                 <showProgressIndicator>true</showProgressIndicator>
                 <windows8_hoverskin>Skin Defaults</windows8_hoverskin>
@@ -2113,15 +2113,15 @@
                 <widgetID>p2kwiet118379050837089</widgetID>
                 <createdGAVersion>5.5.0</createdGAVersion>
                 <location>
-                    <x>91</x>
+                    <x>52</x>
                     <y>1</y>
                 </location>
                 <size>
-                    <width>43</width>
+                    <width>82</width>
                     <height>50</height>
                 </size>
                 <sizePercent>
-                    <width>10</width>
+                    <width>19</width>
                     <height>100</height>
                 </sizePercent>
                 <skinId>Skin Defaults</skinId>

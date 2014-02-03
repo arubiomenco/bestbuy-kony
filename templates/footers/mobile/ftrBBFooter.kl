@@ -791,7 +791,7 @@
                 <width>100</width>
                 <height>11</height>
             </sizePercent>
-            <skinId>Skin Defaults</skinId>
+            <skinId>sknHbBackground</skinId>
             <focusSkinId>Skin Defaults</focusSkinId>
             <localeId>None</localeId>
             <visible>true</visible>
