@@ -56,4 +56,14 @@ function skinsInit() {
     sknHbBackground = "sknHbBackground";
     sknFrmBackground = "sknFrmBackground";
     sknBtnBackP = "sknBtnBackP";
+    sknBtnPrevious = "sknBtnPrevious";
+    sknBtnPreviousP = "sknBtnPreviousP";
+    sknBtnNext = "sknBtnNext";
+    sknBtnNextP = "sknBtnNextP";
+    sknBtnSearch = "sknBtnSearch";
+    sknTxtNormal = "sknTxtNormal";
+    sknSegNormal = "sknSegNormal";
+    sknLblBreadcrumb = "sknLblBreadcrumb";
+    sknBtnExit = "sknBtnExit";
+    sknLblCategory = "sknLblCategory";
 };

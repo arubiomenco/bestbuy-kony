@@ -1,4 +1,12 @@
 //Template File
+function hdrBBHeader_btnBack_onClick_seq0(eventobject) {
+    goBack.call(this);
+};
+
+function hdrBBHeader_btnExit_onClick_seq0(eventobject) {
+    kony.application.exit();
+};
+
 function initializehdrBBHeader() {
     hbxHdrBBHeader = new kony.ui.BoxTemplate({
         "id": "hbxHdrBBHeader",
@@ -24,7 +32,8 @@ function initializehdrBBHeader() {
             "isVisible": true,
             "text": null,
             "skin": "sknBtnBack",
-            "focusSkin": "btnFocus"
+            "focusSkin": "btnFocus",
+            "onClick": hdrBBHeader_btnBack_onClick_seq0
         }, {
             "widgetAlignment": constants.WIDGET_ALIGN_MIDDLE_LEFT,
             "vExpand": false,
@@ -86,9 +95,28 @@ function initializehdrBBHeader() {
             "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
             "marginInPixel": false,
             "paddingInPixel": false,
-            "containerWeight": 30
+            "containerWeight": 19
+        }, {});
+        var btnExit = new kony.ui.Button({
+            "id": "btnExit",
+            "isVisible": true,
+            "text": null,
+            "skin": "sknBtnExit",
+            "focusSkin": "btnFocus",
+            "onClick": hdrBBHeader_btnExit_onClick_seq0
+        }, {
+            "widgetAlignment": constants.WIDGET_ALIGN_MIDDLE_RIGHT,
+            "vExpand": false,
+            "hExpand": false,
+            "margin": [0, 0, 0, 0],
+            "padding": [0, 3, 0, 3],
+            "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+            "displayText": true,
+            "marginInPixel": false,
+            "paddingInPixel": false,
+            "containerWeight": 11
         }, {});
         hbxHdrBBHeader.add(
-        btnBack, label118379050873733, imgLogo, label118379050866706);
+        btnBack, label118379050873733, imgLogo, label118379050866706, btnExit);
     }
 };

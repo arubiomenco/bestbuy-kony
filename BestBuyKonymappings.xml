@@ -2,7 +2,11 @@
 <application id="BestBuyKony" name="BestBuyKony">
     <container displayname="Popup" id="hdrBBHeader" type="dialog"/>
     <container displayname="Popup" id="ftrBBFooter" type="dialog"/>
-    <container displayname="Form" id="FrmHome" type="form"/>
+    <container displayname="Form" id="FrmCategories" type="form">
+        <component displayname="TextBox2" id="txtSearch" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="FrmProductDetail" type="form"/>
+    <container displayname="Form" id="FrmProducts" type="form"/>
     <globalsequences/>
     <skins/>
 </application>

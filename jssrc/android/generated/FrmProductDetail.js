@@ -1,17 +1,16 @@
 //Form JS File
-function addWidgetsFrmHome() {};
+function addWidgetsFrmProductDetail() {};
 
-function FrmHomeGlobals() {
+function FrmProductDetailGlobals() {
     var MenuId = [];
-    FrmHome = new kony.ui.Form2({
-        "id": "FrmHome",
+    FrmProductDetail = new kony.ui.Form2({
+        "id": "FrmProductDetail",
         "title": null,
         "needAppMenu": true,
         "headers": [hbxHdrBBHeader],
-        "footers": [hbxFtrBBFooter],
         "enabledForIdleTimeout": false,
         "skin": "sknFrmBackground",
-        "addWidgets": addWidgetsFrmHome
+        "addWidgets": addWidgetsFrmProductDetail
     }, {
         "padding": [0, 0, 0, 0],
         "displayOrientation": constants.FORM_DISPLAY_ORIENTATION_PORTRAIT,

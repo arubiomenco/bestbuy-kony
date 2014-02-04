@@ -22,8 +22,8 @@ function initializeftrBBFooter() {
         var btnPrevious = new kony.ui.Button({
             "id": "btnPrevious",
             "isVisible": true,
-            "text": "<< Previous",
-            "skin": "btnNormal",
+            "text": null,
+            "skin": "sknBtnPrevious",
             "focusSkin": "btnFocus"
         }, {
             "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
@@ -35,8 +35,10 @@ function initializeftrBBFooter() {
             "displayText": true,
             "marginInPixel": false,
             "paddingInPixel": false,
-            "containerWeight": 25
-        }, {});
+            "containerWeight": 11
+        }, {
+            "pressedSkin": "sknBtnPreviousP"
+        });
         var lblPageInfo = new kony.ui.Label({
             "id": "lblPageInfo",
             "isVisible": true,
@@ -51,13 +53,13 @@ function initializeftrBBFooter() {
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
             "marginInPixel": false,
             "paddingInPixel": false,
-            "containerWeight": 50
+            "containerWeight": 78
         }, {});
         var btnNext = new kony.ui.Button({
             "id": "btnNext",
             "isVisible": true,
-            "text": "Next >>",
-            "skin": "btnNormal",
+            "text": null,
+            "skin": "sknBtnNext",
             "focusSkin": "btnFocus"
         }, {
             "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
@@ -69,8 +71,10 @@ function initializeftrBBFooter() {
             "displayText": true,
             "marginInPixel": false,
             "paddingInPixel": false,
-            "containerWeight": 25
-        }, {});
+            "containerWeight": 11
+        }, {
+            "pressedSkin": "sknBtnNextP"
+        });
         hbxFtrBBFooter.add(
         btnPrevious, lblPageInfo, btnNext);
     }

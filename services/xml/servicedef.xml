@@ -31,6 +31,10 @@
                <param datatype="string" format="None" formatvalue="" name="catId" sms-name="" src="category/id" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="catName" sms-name="" src="category/name" target="response"/>
             </dataset>
+            <dataset id="path" src="//categories/category/path">
+               <param datatype="string" format="None" formatvalue="" name="catId" sms-name="" src="category/id" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="catName" sms-name="" src="category/name" target="response"/>
+            </dataset>
             <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
             <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
             <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>

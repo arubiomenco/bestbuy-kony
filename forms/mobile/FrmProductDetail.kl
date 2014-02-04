@@ -2,7 +2,7 @@
 <kPage>
     <ID></ID>
     <layoutType>0</layoutType>
-    <widgetID>p2kwiet118379050833565</widgetID>
+    <widgetID>p2kwiet118379050838783</widgetID>
     <createdGAVersion>5.5.0</createdGAVersion>
     <marginUnitUpdated>true</marginUnitUpdated>
     <location>
@@ -23,7 +23,7 @@
         <height>false</height>
     </overridePerferred>
     <projectName>BestBuyKony</projectName>
-    <formName>FrmHome</formName>
+    <formName>FrmProductDetail</formName>
     <platform>0</platform>
     <mode>0</mode>
     <formCategory>0</formCategory>
@@ -32,7 +32,7 @@
     <headersrcList></headersrcList>
     <footersrcList></footersrcList>
     <children xsi:type="kForm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <ID>FrmHome</ID>
+        <ID>FrmProductDetail</ID>
         <gridMetaData>
             <colSpan>1</colSpan>
             <column>0</column>
@@ -45,7 +45,7 @@
             <verticalFill>1</verticalFill>
         </gridMetaData>
         <layoutType>0</layoutType>
-        <widgetID>p2kwiet118379050833566</widgetID>
+        <widgetID>p2kwiet118379050838784</widgetID>
         <createdGAVersion>5.5.0</createdGAVersion>
         <location>
             <x>5</x>
@@ -426,7 +426,7 @@
         <retain_scrollPosition>false</retain_scrollPosition>
         <dialog_width>80</dialog_width>
         <headerId>hdrBBHeader</headerId>
-        <footerId>ftrBBFooter</footerId>
+        <footerId>None</footerId>
         <title></title>
         <init>
             <evtSequence>
@@ -832,7 +832,7 @@
             <referenceWidth>0</referenceWidth>
             <sizeMode>constants.GRID_TYPE_FIXED</sizeMode>
         </gridviewConfig>
-        <widgetID>p2kwiet118379050833568</widgetID>
+        <widgetID>p2kwiet118379050838786</widgetID>
         <createdGAVersion>5.5.0</createdGAVersion>
         <location>
             <x>-1</x>
