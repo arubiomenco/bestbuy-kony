@@ -32,7 +32,17 @@ function addWidgetsFrmProducts() {
         "id": "segProducts",
         "isVisible": true,
         "retainSelection": false,
-        "rowTemplate": segProductsbox,
+        "widgetDataMap": {
+            "lblRate": "lblRate",
+            "imgThumbnail": "imgThumbnail",
+            "vbox4847269003": "vbox4847269003",
+            "hbxTplNormal": "hbxTplNormal",
+            "lblName": "lblName",
+            "lblPrice": "lblPrice",
+            "segTplNormal": "segTplNormal"
+        },
+        "rowTemplate": hbxTplNormal,
+        "widgetSkin": "sknSegNormal",
         "rowSkin": "seg2Normal",
         "rowFocusSkin": "seg2Focus",
         "sectionHeaderSkin": "seg2Header",
@@ -45,8 +55,8 @@ function addWidgetsFrmProducts() {
         "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR,
         "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW
     }, {
-        "margin": [0, 0, 0, 0],
-        "padding": [0, 0, 0, 0],
+        "margin": [2, 2, 2, 2],
+        "padding": [5, 5, 5, 5],
         "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 45

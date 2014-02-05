@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <application id="BestBuyKony" name="BestBuyKony">
-    <container displayname="Popup" id="hdrBBHeader" type="dialog"/>
     <container displayname="Popup" id="ftrBBFooter" type="dialog"/>
+    <container displayname="Popup" id="segTplNormal" type="dialog"/>
+    <container displayname="Popup" id="segTplOnSale" type="dialog"/>
     <container displayname="Form" id="FrmCategories" type="form">
         <component displayname="TextBox2" id="txtSearch" type="textbox2"/>
     </container>
     <container displayname="Form" id="FrmProductDetail" type="form"/>
     <container displayname="Form" id="FrmProducts" type="form"/>
+    <container displayname="Popup" id="hdrBBHeader" type="dialog"/>
     <globalsequences/>
     <skins/>
 </application>

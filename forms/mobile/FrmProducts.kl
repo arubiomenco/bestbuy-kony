@@ -1514,13 +1514,13 @@
             </rendererData>
             <margins>
                 <android>
-                    <left>0</left>
-                    <right>0</right>
-                    <top>0</top>
-                    <bottom>0</bottom>
+                    <left>2</left>
+                    <right>2</right>
+                    <top>2</top>
+                    <bottom>2</bottom>
                     <unit>%</unit>
                 </android>
-                <android_override>false</android_override>
+                <android_override>true</android_override>
                 <bb>
                     <left>0</left>
                     <right>0</right>
@@ -1781,13 +1781,13 @@
             </margins>
             <paddings>
                 <android>
-                    <left>0</left>
-                    <right>0</right>
-                    <top>0</top>
-                    <bottom>0</bottom>
+                    <left>5</left>
+                    <right>5</right>
+                    <top>5</top>
+                    <bottom>5</bottom>
                     <unit>%</unit>
                 </android>
-                <android_override>false</android_override>
+                <android_override>true</android_override>
                 <bb>
                     <left>0</left>
                     <right>0</right>
@@ -2047,7 +2047,7 @@
                 <xhtmlNormal_override>false</xhtmlNormal_override>
             </paddings>
             <columns/>
-            <rowTemplate>None</rowTemplate>
+            <rowTemplate>segTplNormal</rowTemplate>
             <secHeaderTemplate>None</secHeaderTemplate>
             <choiceData>
                 <serviceType>2</serviceType>
@@ -2055,11 +2055,11 @@
                 <segData/>
                 <tablerowData/>
                 <dummydata>false</dummydata>
-                <updatedToNewSegmentData>false</updatedToNewSegmentData>
-                <updatedToNewTableRowData>false</updatedToNewTableRowData>
-                <updatedToNewImageData>false</updatedToNewImageData>
+                <updatedToNewSegmentData>true</updatedToNewSegmentData>
+                <updatedToNewTableRowData>true</updatedToNewTableRowData>
+                <updatedToNewImageData>true</updatedToNewImageData>
             </choiceData>
-            <widgetSkin>Skin Defaults</widgetSkin>
+            <widgetSkin>sknSegNormal</widgetSkin>
             <rowSkin>Skin Defaults</rowSkin>
             <rowFocusSkin>Skin Defaults</rowFocusSkin>
             <alternateRowSkin>Skin Defaults</alternateRowSkin>

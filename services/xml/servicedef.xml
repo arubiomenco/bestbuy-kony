@@ -72,14 +72,14 @@
                <param datatype="string" format="None" formatvalue="" name="id" sms-name="" src="product/productId" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="sku" sms-name="" src="product/sku" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="name" sms-name="" src="product/name" target="response"/>
-               <param datatype="number" format="None" formatvalue="" name="salePrice" sms-name="" src="product/salePrice" target="response"/>
-               <param datatype="number" format="None" formatvalue="" name="regularPrice" sms-name="" src="product/regularPrice" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="salePrice" sms-name="" src="product/salePrice" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="regularPrice" sms-name="" src="product/regularPrice" target="response"/>
                <param datatype="boolean" format="None" formatvalue="" name="onSale" sms-name="" src="product/onSale" target="response"/>
-               <param datatype="number" format="None" formatvalue="" name="new" sms-name="" src="product/new" target="response"/>
+               <param datatype="boolean" format="None" formatvalue="" name="new" sms-name="" src="product/new" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="image" sms-name="" src="product/image" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="description" sms-name="" src="product/longDescription" target="response"/>
                <param datatype="number" format="None" formatvalue="" name="reviews" sms-name="" src="product/customerReviewCount" target="response"/>
-               <param datatype="number" format="None" formatvalue="" name="avgReview" sms-name="" src="product/customerReviewAverage" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="avgReview" sms-name="" src="product/customerReviewAverage" target="response"/>
             </dataset>
             <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
             <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>

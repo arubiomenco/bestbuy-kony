@@ -66,4 +66,7 @@ function skinsInit() {
     sknLblBreadcrumb = "sknLblBreadcrumb";
     sknBtnExit = "sknBtnExit";
     sknLblCategory = "sknLblCategory";
+    sknLblOnSale = "sknLblOnSale";
+    sknOnSaleBanner = "sknOnSaleBanner";
+    sknBtnInvisible = "sknBtnInvisible";
 };

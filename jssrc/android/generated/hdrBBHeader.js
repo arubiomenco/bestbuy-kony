@@ -31,7 +31,7 @@ function initializehdrBBHeader() {
             "id": "btnBack",
             "isVisible": true,
             "text": null,
-            "skin": "sknBtnBack",
+            "skin": "sknBtnInvisible",
             "focusSkin": "btnFocus",
             "onClick": hdrBBHeader_btnBack_onClick_seq0
         }, {

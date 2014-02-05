@@ -7,6 +7,10 @@ function FrmCategories_FrmCategories_onDeviceBack_seq0(eventobject, neworientati
     goBack.call(this);
 };
 
+function FrmCategories_btnSearch_onClick_seq0(eventobject) {
+    search_onClick.call(this);
+};
+
 function FrmCategories_segCategories_onRowClick_seq0(eventobject, sectionNumber, rowNumber) {
     segCategories_onClick.call(this);
 };
@@ -43,7 +47,8 @@ function addWidgetsFrmCategories() {
         "isVisible": true,
         "text": null,
         "skin": "sknBtnSearch",
-        "focusSkin": "btnFocus"
+        "focusSkin": "btnFocus",
+        "onClick": FrmCategories_btnSearch_onClick_seq0
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
