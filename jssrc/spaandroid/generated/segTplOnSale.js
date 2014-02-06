@@ -1,27 +1,11 @@
 //Template File
 function initializesegTplOnSale() {
-    var lblOnSale = new kony.ui.Label({
-        "id": "lblOnSale",
-        "isVisible": true,
-        "text": "ON SALE!",
-        "skin": "sknOnSaleBanner"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [0, 0, 0, 0],
-        "padding": [1, 1, 1, 1],
-        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "marginInPixel": false,
-        "paddingInPixel": false,
-        "containerWeight": 14
-    }, {});
     var imgThumbnail = new kony.ui.Image2({
         "id": "imgThumbnail",
         "isVisible": true,
         "src": null,
         "imageWhenFailed": null,
-        "imageWhileDownloading": null
+        "imageWhileDownloading": "load.png"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "margin": [0, 0, 0, 0],
@@ -37,7 +21,7 @@ function initializesegTplOnSale() {
         "id": "lblName",
         "isVisible": true,
         "text": "<name>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -69,7 +53,7 @@ function initializesegTplOnSale() {
         "id": "lblRate",
         "isVisible": true,
         "text": "<rate>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -120,7 +104,7 @@ function initializesegTplOnSale() {
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
-        "containerWeight": 44,
+        "containerWeight": 43,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "margin": [0, 0, 0, 0],
@@ -148,10 +132,11 @@ function initializesegTplOnSale() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     vbox4847269005.add(
-    lblOnSale, hbox4847269007);
+    hbox4847269007);
     hbxTplOnSale = new kony.ui.Box({
         "id": "hbxTplOnSale",
         "isVisible": true,
+        "skin": "sknHbxOnSale",
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
         "containerWeight": 43,

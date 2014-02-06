@@ -2,7 +2,7 @@
 var globalhttpheaders = {};
 var appConfig = {
     appId: "BestBuyKony",
-    appName: "BestBuyKony",
+    appName: "BB Kony Cert",
     appVersion: "1.0.0",
     platformVersion: null,
     serverIp: "192.168.1.36",
@@ -19,10 +19,11 @@ function appInit(params) {
     skinsInit();
     initializehdrBBHeader();
     initializesegTplCategory();
-    initializesegTplNormal();
     initializesegTplOnSale();
+    initializesegTplProduct();
     initializesegTplReview();
     FrmCategoriesGlobals();
+    FrmImagesGlobals();
     FrmProductDetailGlobals();
     FrmProductsGlobals();
     setAppBehaviors();

@@ -1,11 +1,11 @@
 //Template File
-function initializesegTplNormal() {
+function initializesegTplProduct() {
     var imgThumbnail = new kony.ui.Image2({
         "id": "imgThumbnail",
         "isVisible": true,
         "src": null,
         "imageWhenFailed": null,
-        "imageWhileDownloading": null
+        "imageWhileDownloading": "load.png"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "margin": [0, 0, 0, 0],
@@ -21,7 +21,7 @@ function initializesegTplNormal() {
         "id": "lblName",
         "isVisible": true,
         "text": "<name>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -37,7 +37,7 @@ function initializesegTplNormal() {
         "id": "lblPrice",
         "isVisible": true,
         "text": "<price>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -53,7 +53,7 @@ function initializesegTplNormal() {
         "id": "lblRate",
         "isVisible": true,
         "text": "<rate>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -99,8 +99,8 @@ function initializesegTplNormal() {
         "paddingInPixel": false,
         "containerWeight": 8
     }, {});
-    hbxTplNormal = new kony.ui.Box({
-        "id": "hbxTplNormal",
+    hbxTplProduct = new kony.ui.Box({
+        "id": "hbxTplProduct",
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
@@ -114,6 +114,6 @@ function initializesegTplNormal() {
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
-    hbxTplNormal.add(
+    hbxTplProduct.add(
     imgThumbnail, vbox4847269003, imgForward);
 };

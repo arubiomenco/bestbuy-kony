@@ -2,16 +2,23 @@
 <application id="BestBuyKony" name="BestBuyKony">
     <container displayname="Popup" id="hdrBBHeader" type="dialog"/>
     <container displayname="Popup" id="segTplCategory" type="dialog"/>
-    <container displayname="Popup" id="segTplNormal" type="dialog"/>
     <container displayname="Popup" id="segTplOnSale" type="dialog"/>
+    <container displayname="Popup" id="segTplProduct" type="dialog"/>
     <container displayname="Popup" id="segTplReview" type="dialog"/>
+    <container displayname="Popup" id="segTplCategory" type="dialog"/>
+    <container displayname="Popup" id="segTplOnSale" type="dialog"/>
     <container displayname="Form" id="FrmCategories" type="form">
-        <component displayname="TextBox2" id="txtSearch" type="textbox2">
-            <attributes datatype="boolean" name="enablesearchbar" platform="spa" value="true"/>
-        </component>
+        <component displayname="TextBox2" id="txtSearch" type="textbox2"/>
     </container>
-    <container displayname="Form" id="FrmProductDetail" type="form"/>
+    <container displayname="Form" id="FrmImages" type="form"/>
     <container displayname="Form" id="FrmProducts" type="form"/>
+    <container displayname="Form" id="FrmCategories" type="form">
+        <component displayname="TextBox2" id="txtSearch" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="FrmImages" type="form"/>
+    <container displayname="Form" id="FrmProducts" type="form"/>
+    <container displayname="Form" id="FrmProductDetail" type="form"/>
+    <container displayname="Form" id="FrmProductDetail" type="form"/>
     <globalsequences/>
     <skins/>
 </application>

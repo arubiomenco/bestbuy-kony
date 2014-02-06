@@ -80,6 +80,13 @@
                <param datatype="string" format="None" formatvalue="" name="description" sms-name="" src="product/longDescription" target="response"/>
                <param datatype="number" format="None" formatvalue="" name="reviews" sms-name="" src="product/customerReviewCount" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="avgReview" sms-name="" src="product/customerReviewAverage" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="angleImage" sms-name="" src="product/angleImage" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="backImage" sms-name="" src="product/backViewImage" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="leftImage" sms-name="" src="product/leftViewImage" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="accessoriesImage" sms-name="" src="product/accessoriesImage" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="remoteCImage" sms-name="" src="product/remoteControlImage" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="rightImage" sms-name="" src="product/rightViewImage" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="topImage" sms-name="" src="product/topViewImage" target="response"/>
             </dataset>
             <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
             <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>

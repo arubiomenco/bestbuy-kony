@@ -2093,17 +2093,35 @@
                     <height>false</height>
                 </overridePerferred>
                 <contentAlign>4</contentAlign>
-                <length>0</length>
+                <length>80</length>
                 <mode>0</mode>
                 <secure_text_entry>false</secure_text_entry>
                 <onClick>
                     <evtSequence>
+                        <actionList xsi:type="eventFunctionAction">
+                            <enabled>true</enabled>
+                            <name></name>
+                            <type>6</type>
+                            <functionName>None</functionName>
+                            <functionNameMap>
+                                <entry>
+                                    <key>js</key>
+                                    <value>search_onClick</value>
+                                </entry>
+                            </functionNameMap>
+                            <paramDataMap>
+                                <entry>
+                                    <key>js</key>
+                                    <value/>
+                                </entry>
+                            </paramDataMap>
+                        </actionList>
                         <enabled>true</enabled>
                         <seqname></seqname>
                     </evtSequence>
                 </onClick>
                 <autoCapitalize>TEXTBOX_AUTO_CAPITALIZE_NONE</autoCapitalize>
-                <placeholder>Search</placeholder>
+                <placeholder>Enter keywords...</placeholder>
                 <placeholder_I18N></placeholder_I18N>
                 <keyboard_type>0</keyboard_type>
                 <overrideProperties>KTextBox2.ipad_containerHeightMode</overrideProperties>
@@ -2115,7 +2133,7 @@
                         <seqname></seqname>
                     </evtSequence>
                 </onTextChange>
-                <parent_placeholderSkin>None</parent_placeholderSkin>
+                <parent_placeholderSkin>sknTxtPlaceholder</parent_placeholderSkin>
                 <iphone_placeholderSkin>Skin Defaults</iphone_placeholderSkin>
                 <iphone_containerHeightMode>TEXTBOX_DEFAULT_PLATFORM_HEIGHT</iphone_containerHeightMode>
                 <iphone_showProgressIndicator>true</iphone_showProgressIndicator>
@@ -2193,7 +2211,7 @@
                 <android_autoFilter>false</android_autoFilter>
                 <wm_autoFilter>false</wm_autoFilter>
                 <c_autoFilter>false</c_autoFilter>
-                <c_view>searchbox</c_view>
+                <c_view>textbox</c_view>
                 <android_view>textbox</android_view>
                 <iphone_view>textbox</iphone_view>
                 <ipad_view>textbox</ipad_view>
@@ -2866,7 +2884,7 @@
                 </paddings>
                 <SText></SText>
                 <overridePerferred>
-                    <width>true</width>
+                    <width>false</width>
                     <height>false</height>
                 </overridePerferred>
                 <contentAlign>4</contentAlign>
@@ -2954,7 +2972,7 @@
                 <desktopWebToolTip></desktopWebToolTip>
                 <desktop_hoverskin>Skin Defaults</desktop_hoverskin>
                 <displayText>true</displayText>
-                <pressedSkin>Skin Defaults</pressedSkin>
+                <pressedSkin>sknBtnSearchP</pressedSkin>
                 <blockedSkin>Skin Defaults</blockedSkin>
                 <showProgressIndicator>true</showProgressIndicator>
                 <windows8_hoverskin>Skin Defaults</windows8_hoverskin>
@@ -3701,7 +3719,7 @@
                 <android>
                     <left>2</left>
                     <right>2</right>
-                    <top>2</top>
+                    <top>0</top>
                     <bottom>2</bottom>
                     <unit>%</unit>
                 </android>

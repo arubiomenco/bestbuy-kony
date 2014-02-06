@@ -7,7 +7,7 @@ function frmProducts_preShow() {
     currentPage = 1;
     totalPages = 1;
     FrmProducts.segProducts.removeAll();
-    handlePagination();
+    handleProductPagination();
     FrmProducts.lblInfo.text = "";
     showBackButton(true);
     var category = kony.store.getItem("category");
@@ -17,10 +17,10 @@ function frmProducts_preShow() {
         category: category,
         searchFor: searchFor
     };
-    loadProducts(currentPage);
+    loadProducts();
 }
 
-function loadProducts(page) {
+function loadProducts() {
     if (productSpec != null) {
         kony.print("Load Products: " + JSON.stringify(productSpec));
         var productCriteria = null;
@@ -35,7 +35,7 @@ function loadProducts(page) {
             channel: "rc",
             apiKey: apiKey,
             prodCriteria: productCriteria,
-            page: "" + page
+            page: "" + currentPage
         };
         kony.print(JSON.stringify(params));
         var info = {};
@@ -63,7 +63,7 @@ function callback_Products(status, results, info) {
                         results.products[i].template = hbxTplOnSale;
                         results.products[i].price = "$" + results.products[i].salePrice;
                     } else {
-                        results.products[i].template = hbxTplNormal;
+                        results.products[i].template = hbxTplProduct;
                         results.products[i].price = "$" + results.products[i].regularPrice;
                     }
                 }
@@ -74,10 +74,10 @@ function callback_Products(status, results, info) {
                     lblRate: "reviewInfo",
                     imgThumbnail: "image"
                 };
-                handlePagination();
+                handleProductPagination();
             }
             //Update label info
-            setLabelInfo(results.total);
+            setProductsLabelInfo(results.total);
         } else {
             kony.print(JSON.stringify(results));
             alert("Error getting Products. Try again later");
@@ -85,25 +85,44 @@ function callback_Products(status, results, info) {
     }
 }
 
-function setLabelInfo(count) {
+function productNext_onClick() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        loadProducts();
+    }
+}
+
+function productPrevious_onClick() {
+    if (currentPage > 1) {
+        currentPage--;
+        loadProducts();
+    }
+}
+
+function segProducts_onClick() {
+    var selProduct = FrmProducts.segProducts.selectedItems[0];
+    setProductDetails(selProduct);
+    FrmProductDetail.show();
+}
+
+function setProductsLabelInfo(count) {
     if (count > 0) {
         if (productSpec.isSearch) {
-            FrmProducts.lblInfo.text = "Results for: \"" + productSpec.searchFor + "\"";
+            FrmProducts.lblInfo.text = "Results for: \"" + productSpec.searchFor + "\" (" + count + ")";
         } else {
-            FrmProducts.lblInfo.text = "Category: " + productSpec.category.catName;
+            FrmProducts.lblInfo.text = "Category: " + productSpec.category.catName + " (" + count + ")";
         }
     } else {
         if (productSpec.isSearch) {
             FrmProducts.lblInfo.text = "No results for: \"" + productSpec.searchFor + "\"";
         } else {
-            FrmProducts.lblInfo.text = "There are no products in Category: " + productSpec.category.catName;
+            FrmProducts.lblInfo.text = "No products in Category: " + productSpec.category.catName;
         }
     }
 }
 
-function handlePagination() {
+function handleProductPagination() {
     FrmProducts.hbxFooter.isVisible = (totalPages > 1);
-    kony.print("btnNext Skin (Before): " + FrmProducts.btnNext.skin);
     if (currentPage < totalPages) {
         FrmProducts.btnNext.setEnabled(true);
         FrmProducts.btnNext.skin = sknBtnNext;
@@ -111,15 +130,12 @@ function handlePagination() {
         FrmProducts.btnNext.setEnabled(false);
         FrmProducts.btnNext.skin = sknBtnInvisible;
     }
-    kony.print("btnNext Skin (After): " + FrmProducts.btnNext.skin);
-    kony.print("btnPrevious Skin (Before): " + FrmProducts.btnPrevious.skin);
     if (currentPage > 1) {
         FrmProducts.btnPrevious.setEnabled(true);
-        FrmProducts.btnPrevious.skin = sknBtnBack;
+        FrmProducts.btnPrevious.skin = sknBtnPrevious;
     } else {
         FrmProducts.btnPrevious.setEnabled(false);
         FrmProducts.btnPrevious.skin = sknBtnInvisible;
     }
-    kony.print("btnPrevious Skin (After): " + FrmProducts.btnPrevious.skin);
     FrmProducts.lblPageInfo.text = "Page " + currentPage + " of " + totalPages;
 }

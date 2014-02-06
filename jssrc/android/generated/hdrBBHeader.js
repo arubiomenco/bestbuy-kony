@@ -115,7 +115,9 @@ function initializehdrBBHeader() {
             "marginInPixel": false,
             "paddingInPixel": false,
             "containerWeight": 11
-        }, {});
+        }, {
+            "pressedSkin": "sknBtnExitP"
+        });
         hbxHdrBBHeader.add(
         btnBack, label118379050873733, imgLogo, label118379050866706, btnExit);
     }

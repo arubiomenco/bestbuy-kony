@@ -2722,7 +2722,7 @@
                         <width>100</width>
                         <height>9</height>
                     </sizePercent>
-                    <skinId>sknLblCategory</skinId>
+                    <skinId>sknLblSmall</skinId>
                     <focusSkinId>Skin Defaults</focusSkinId>
                     <localeId>None</localeId>
                     <visible>true</visible>
@@ -4066,7 +4066,7 @@
                         <width>100</width>
                         <height>9</height>
                     </sizePercent>
-                    <skinId>sknLblCategory</skinId>
+                    <skinId>sknLblSmall</skinId>
                     <focusSkinId>Skin Defaults</focusSkinId>
                     <localeId>None</localeId>
                     <visible>true</visible>

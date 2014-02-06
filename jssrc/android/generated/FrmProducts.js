@@ -50,16 +50,9 @@ function addWidgetsFrmProducts() {
         "retainSelection": false,
         "widgetDataMap": {
             "lblOnSale": "lblOnSale",
-            "lblRate": "lblRate",
-            "imgThumbnail": "imgThumbnail",
-            "vbox4847269003": "vbox4847269003",
-            "hbxTplNormal": "hbxTplNormal",
-            "lblName": "lblName",
-            "lblPrice": "lblPrice",
-            "segTplNormal": "segTplNormal",
             "imgForward": "imgForward"
         },
-        "rowTemplate": hbxTplNormal,
+        "rowTemplate": segProductsbox,
         "widgetSkin": "sknSegNormal",
         "rowSkin": "seg2Normal",
         "rowFocusSkin": "seg2Focus",

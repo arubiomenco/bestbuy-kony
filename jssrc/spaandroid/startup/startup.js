@@ -1,7 +1,7 @@
 //startup.js file
 var appConfig = {
     appId: "BestBuyKony",
-    appName: "BestBuyKony",
+    appName: "BB Kony Cert",
     appVersion: "1.0.0",
     platformVersion: null,
     serverIp: "192.168.1.36",
@@ -17,9 +17,11 @@ function appInit(params) {
     skinsInit();
     initializehdrBBHeader();
     initializesegTplCategory();
-    initializesegTplNormal();
     initializesegTplOnSale();
+    initializesegTplProduct();
+    initializesegTplReview();
     FrmCategoriesGlobals();
+    FrmImagesGlobals();
     FrmProductDetailGlobals();
     FrmProductsGlobals();
     //to generate adherePercentageStrictly, retainSpace, marginPaddingConsistency flags as true if the project is created in 5.5

@@ -1441,7 +1441,7 @@
                     <width>91</width>
                     <height>100</height>
                 </sizePercent>
-                <skinId>sknLblCategory</skinId>
+                <skinId>sknLblNormal</skinId>
                 <focusSkinId>Skin Defaults</focusSkinId>
                 <localeId>None</localeId>
                 <visible>true</visible>

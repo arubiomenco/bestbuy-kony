@@ -7,6 +7,10 @@ function FrmCategories_FrmCategories_onDeviceBack_seq0(eventobject, neworientati
     goBack.call(this);
 };
 
+function FrmCategories_txtSearch_onDone_seq0(eventobject, changedtext) {
+    search_onClick.call(this);
+};
+
 function FrmCategories_btnSearch_onClick_seq0(eventobject) {
     search_onClick.call(this);
 };
@@ -22,8 +26,10 @@ function addWidgetsFrmCategories() {
         "text": null,
         "secureTextEntry": false,
         "textInputMode": constants.TEXTBOX_INPUT_MODE_ANY,
-        "placeholder": "Search",
+        "maxTextLength": 80,
+        "placeholder": "Enter keywords...",
         "autoCapitalize": constants.TEXTBOX_AUTO_CAPITALIZE_NONE,
+        "onDone": FrmCategories_txtSearch_onDone_seq0,
         "skin": "sknTxtNormal",
         "focusSkin": "tbx2Focus",
         "keyBoardStyle": constants.TEXTBOX_KEY_BOARD_STYLE_DEFAULT
@@ -40,7 +46,8 @@ function addWidgetsFrmCategories() {
         "containerWeight": 89
     }, {
         "autoFilter": false,
-        "viewType": constants.TEXTBOX_VIEW_TYPE_SEARCH_VIEW
+        "viewType": constants.TEXTBOX_VIEW_TYPE_DEFAULT,
+        "placeholderSkin": "sknTxtPlaceholder"
     });
     var btnSearch = new kony.ui.Button({
         "id": "btnSearch",
@@ -52,7 +59,7 @@ function addWidgetsFrmCategories() {
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
-        "hExpand": true,
+        "hExpand": false,
         "margin": [0, 0, 0, 0],
         "padding": [0, 3, 0, 3],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
@@ -60,7 +67,9 @@ function addWidgetsFrmCategories() {
         "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 11
-    }, {});
+    }, {
+        "pressedSkin": "sknBtnSearchP"
+    });
     var hbxSearch = new kony.ui.Box({
         "id": "hbxSearch",
         "isVisible": true,
@@ -128,7 +137,7 @@ function addWidgetsFrmCategories() {
         "selectionBehavior": constants.SEGUI_SINGLE_SELECT_BEHAVIOR,
         "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW
     }, {
-        "margin": [2, 2, 2, 2],
+        "margin": [2, 0, 2, 2],
         "padding": [5, 5, 5, 5],
         "marginInPixel": false,
         "paddingInPixel": false,

@@ -2125,10 +2125,10 @@
                     </rendererData>
                     <margins>
                         <android>
-                            <left>1</left>
-                            <right>1</right>
-                            <top>0</top>
-                            <bottom>0</bottom>
+                            <left>2</left>
+                            <right>2</right>
+                            <top>2</top>
+                            <bottom>2</bottom>
                             <unit>px</unit>
                         </android>
                         <android_override>true</android_override>
@@ -3970,7 +3970,7 @@
                         </overridePerferred>
                         <contentAlign>4</contentAlign>
                         <defaultImageText></defaultImageText>
-                        <animationText></animationText>
+                        <animationText>load.png</animationText>
                         <scale_mode>1</scale_mode>
                         <itemSkinId>Skin Defaults</itemSkinId>
                         <itemFocusSkinId>Skin Defaults</itemFocusSkinId>
@@ -4706,7 +4706,7 @@
                                 <width>100</width>
                                 <height>35</height>
                             </sizePercent>
-                            <skinId>sknLblCategory</skinId>
+                            <skinId>sknLblNormal</skinId>
                             <focusSkinId>Skin Defaults</focusSkinId>
                             <localeId>None</localeId>
                             <visible>true</visible>
@@ -5998,7 +5998,7 @@
                                 <width>100</width>
                                 <height>31</height>
                             </sizePercent>
-                            <skinId>sknLblCategory</skinId>
+                            <skinId>sknLblNormal</skinId>
                             <focusSkinId>Skin Defaults</focusSkinId>
                             <localeId>None</localeId>
                             <visible>true</visible>

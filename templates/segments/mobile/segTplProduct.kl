@@ -23,7 +23,7 @@
         <height>false</height>
     </overridePerferred>
     <projectName>BestBuyKony</projectName>
-    <formName>segTplNormal</formName>
+    <formName>segTplProduct</formName>
     <platform>0</platform>
     <mode>4</mode>
     <formCategory>0</formCategory>
@@ -32,7 +32,7 @@
     <headersrcList></headersrcList>
     <footersrcList></footersrcList>
     <children xsi:type="kForm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <ID>segTplNormal</ID>
+        <ID>segTplProduct</ID>
         <gridMetaData>
             <colSpan>1</colSpan>
             <column>0</column>
@@ -764,7 +764,7 @@
         <desktopweb_draggable>false</desktopweb_draggable>
         <desktopweb_minonlostfocus>false</desktopweb_minonlostfocus>
         <children xsi:type="khBox">
-            <ID>hbxTplNormal</ID>
+            <ID>hbxTplProduct</ID>
             <gridMetaData>
                 <colSpan>1</colSpan>
                 <column>0</column>
@@ -2038,7 +2038,7 @@
                 </overridePerferred>
                 <contentAlign>4</contentAlign>
                 <defaultImageText></defaultImageText>
-                <animationText></animationText>
+                <animationText>load.png</animationText>
                 <scale_mode>1</scale_mode>
                 <itemSkinId>Skin Defaults</itemSkinId>
                 <itemFocusSkinId>Skin Defaults</itemFocusSkinId>
@@ -2774,7 +2774,7 @@
                         <width>100</width>
                         <height>35</height>
                     </sizePercent>
-                    <skinId>sknLblCategory</skinId>
+                    <skinId>sknLblNormal</skinId>
                     <focusSkinId>Skin Defaults</focusSkinId>
                     <localeId>None</localeId>
                     <visible>true</visible>
@@ -3420,7 +3420,7 @@
                         <width>100</width>
                         <height>35</height>
                     </sizePercent>
-                    <skinId>sknLblCategory</skinId>
+                    <skinId>sknLblNormal</skinId>
                     <focusSkinId>Skin Defaults</focusSkinId>
                     <localeId>None</localeId>
                     <visible>true</visible>
@@ -4066,7 +4066,7 @@
                         <width>100</width>
                         <height>31</height>
                     </sizePercent>
-                    <skinId>sknLblCategory</skinId>
+                    <skinId>sknLblNormal</skinId>
                     <focusSkinId>Skin Defaults</focusSkinId>
                     <localeId>None</localeId>
                     <visible>true</visible>

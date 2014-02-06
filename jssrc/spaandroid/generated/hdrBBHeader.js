@@ -3,10 +3,6 @@ function hdrBBHeader_btnBack_onClick_seq0(eventobject) {
     goBack.call(this);
 };
 
-function hdrBBHeader_btnExit_onClick_seq0(eventobject) {
-    closeApplication.call(this);
-};
-
 function initializehdrBBHeader() {
     hbxHdrBBHeader = new kony.ui.Box({
         "id": "hbxHdrBBHeader",
@@ -29,7 +25,7 @@ function initializehdrBBHeader() {
         var btnBack = new kony.ui.Button({
             "id": "btnBack",
             "isVisible": true,
-            "text": null,
+            "text": "Button",
             "skin": "sknBtnInvisible",
             "focusSkin": "btnFocus",
             "onClick": hdrBBHeader_btnBack_onClick_seq0
@@ -40,7 +36,7 @@ function initializehdrBBHeader() {
             "margin": [0, 0, 0, 0],
             "padding": [0, 3, 0, 3],
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-            "displayText": true,
+            "displayText": false,
             "marginInPixel": false,
             "paddingInPixel": false,
             "containerWeight": 11
@@ -94,27 +90,8 @@ function initializehdrBBHeader() {
             "paddingInPixel": false,
             "containerWeight": 19
         }, {});
-        var btnExit = new kony.ui.Button({
-            "id": "btnExit",
-            "isVisible": true,
-            "text": null,
-            "skin": "sknBtnExit",
-            "focusSkin": "btnFocus",
-            "onClick": hdrBBHeader_btnExit_onClick_seq0
-        }, {
-            "widgetAlignment": constants.WIDGET_ALIGN_MIDDLE_RIGHT,
-            "vExpand": false,
-            "hExpand": false,
-            "margin": [0, 0, 0, 0],
-            "padding": [0, 3, 0, 3],
-            "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-            "displayText": true,
-            "marginInPixel": false,
-            "paddingInPixel": false,
-            "containerWeight": 11
-        }, {});
         hbxHdrBBHeader.add(
-        btnBack, label118379050873733, imgLogo, label118379050866706, btnExit);
+        btnBack, label118379050873733, imgLogo, label118379050866706);
     }
     addWidgetshbxHdrBBHeader();
 };

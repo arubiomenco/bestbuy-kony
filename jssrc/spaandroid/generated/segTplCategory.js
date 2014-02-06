@@ -4,13 +4,13 @@ function initializesegTplCategory() {
         "id": "lblCategory",
         "isVisible": true,
         "text": "<category>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [0, 0, 0, 0],
-        "padding": [1, 1, 1, 1],
+        "margin": [2, 2, 2, 2],
+        "padding": [2, 2, 2, 2],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "marginInPixel": false,
         "paddingInPixel": false,
@@ -24,11 +24,11 @@ function initializesegTplCategory() {
         "imageWhileDownloading": null
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_MIDDLE_RIGHT,
-        "margin": [0, 0, 0, 0],
+        "margin": [0, 0, 3, 0],
         "padding": [0, 0, 0, 0],
         "imageScaleMode": constants.IMAGE_SCALE_MODE_CROP,
-        "referenceWidth": null,
-        "referenceHeight": null,
+        "referenceWidth": 24,
+        "referenceHeight": 24,
         "marginInPixel": false,
         "paddingInPixel": false,
         "containerWeight": 9

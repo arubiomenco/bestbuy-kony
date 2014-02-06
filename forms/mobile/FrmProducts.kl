@@ -2116,7 +2116,7 @@
                     <updatedToNewDataGridData>false</updatedToNewDataGridData>
                 </colList>
             </columns>
-            <rowTemplate>segTplNormal</rowTemplate>
+            <rowTemplate>None</rowTemplate>
             <secHeaderTemplate>None</secHeaderTemplate>
             <choiceData>
                 <serviceType>2</serviceType>

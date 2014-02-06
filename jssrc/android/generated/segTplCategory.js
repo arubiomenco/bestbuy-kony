@@ -4,7 +4,7 @@ function initializesegTplCategory() {
         "id": "lblCategory",
         "isVisible": true,
         "text": "<category>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,

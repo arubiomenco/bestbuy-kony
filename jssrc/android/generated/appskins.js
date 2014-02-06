@@ -70,4 +70,13 @@ function skinsInit() {
     sknFrmBackground = "sknFrmBackground";
     sknLblTransparent = "sknLblTransparent";
     sknHbxWhite = "sknHbxWhite";
+    sknLblNormal = "sknLblNormal";
+    sknTxtPlaceholder = "sknTxtPlaceholder";
+    sknHzImages = "sknHzImages";
+    sknBtnExitP = "sknBtnExitP";
+    sknBtnSearchP = "sknBtnSearchP";
+    sknLblSmall = "sknLblSmall";
+    sknFrmLoading = "sknFrmLoading";
+    sknHbxOnSale = "sknHbxOnSale";
+    sknLblUCantSeeMe = "sknLblUCantSeeMe";
 };

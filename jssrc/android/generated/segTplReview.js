@@ -20,7 +20,7 @@ function initializesegTplReview() {
         "id": "lblSubmittedBy",
         "isVisible": true,
         "text": "<submitted>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblSmall"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -53,7 +53,7 @@ function initializesegTplReview() {
         "id": "lblComment",
         "isVisible": true,
         "text": "<comment>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblSmall"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,

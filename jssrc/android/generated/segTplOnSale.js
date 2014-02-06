@@ -9,7 +9,7 @@ function initializesegTplOnSale() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [1, 0, 1, 0],
+        "margin": [2, 2, 2, 2],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "marginInPixel": true,
@@ -21,7 +21,7 @@ function initializesegTplOnSale() {
         "isVisible": true,
         "src": null,
         "imageWhenFailed": null,
-        "imageWhileDownloading": null
+        "imageWhileDownloading": "load.png"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "margin": [0, 0, 0, 0],
@@ -37,7 +37,7 @@ function initializesegTplOnSale() {
         "id": "lblName",
         "isVisible": true,
         "text": "<name>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -69,7 +69,7 @@ function initializesegTplOnSale() {
         "id": "lblRate",
         "isVisible": true,
         "text": "<rate>",
-        "skin": "sknLblCategory"
+        "skin": "sknLblNormal"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,

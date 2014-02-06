@@ -9,11 +9,13 @@ function loadInitialCategories() {
     var categoryInfo = getCurrentCategory();
     if (categoryInfo == null) {
         categoryInfo = homeCategory;
+        setCurrentCategory(homeCategory);
     }
     loadCategories(categoryInfo);
 }
 
 function loadCategories(category) {
+    //showLoadingScreen();
     var categoryInfo = (category == null || category == undefined) ? homeCategory : category;
     kony.print("Load Category: " + JSON.stringify(categoryInfo));
     var cachedData = cachedData = getCachedSubcategories(categoryInfo);
@@ -43,8 +45,6 @@ function callback_Categories(status, results, info) {
             if (info["category"] != undefined && info["category"] != null) {
                 categoryInfo = info.category;
             }
-            //TODO: Verify results categories
-            kony.print(results);
             renderCategories(categoryInfo, results);
         } else {
             kony.print(JSON.stringify(results));
@@ -70,6 +70,7 @@ function segCategories_onClick() {
 function renderCategories(categoryInfo, results) {
     //Cache Data
     cacheSubcategories(categoryInfo, results);
+    //dismissLoadingScreen();
     if (results.categories.length > 0) {
         FrmCategories.segCategories.setData(results.categories);
         FrmCategories.segCategories.widgetDataMap = {
@@ -81,6 +82,13 @@ function renderCategories(categoryInfo, results) {
         setCurrentCategory(categoryInfo);
         kony.store.removeItem("search");
         FrmProducts.show();
+    }
+}
+
+function refreshCategories() {
+    var categoryInfo = getCurrentCategory();
+    if (categoryInfo != null) {
+        loadCategories(categoryInfo);
     }
 }
 

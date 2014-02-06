@@ -3,6 +3,14 @@ function FrmCategories_FrmCategories_preshow_seq0(eventobject, neworientation) {
     loadInitialCategories.call(this);
 };
 
+function FrmCategories_FrmCategories_postshow_seq0(eventobject, neworientation) {
+    refreshCategories.call(this);
+};
+
+function FrmCategories_txtSearch_onDone_seq0(eventobject, changedtext) {
+    search_onClick.call(this);
+};
+
 function FrmCategories_btnSearch_onClick_seq0(eventobject) {
     search_onClick.call(this);
 };
@@ -18,16 +26,18 @@ function addWidgetsFrmCategories() {
         "text": null,
         "secureTextEntry": false,
         "textInputMode": constants.TEXTBOX_INPUT_MODE_ANY,
+        "maxTextLength": 80,
         "keyBoardStyle": constants.TEXTBOX_KEY_BOARD_STYLE_DEFAULT,
-        "placeholder": null,
+        "placeholder": "Enter keywords...",
         "autoCapitalize": constants.TEXTBOX_AUTO_CAPITALIZE_NONE,
+        "onDone": FrmCategories_txtSearch_onDone_seq0,
         "skin": "sknTxtNormal",
         "focusSkin": "tbx2Focus"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [0, 0, 0, 0],
+        "margin": [3, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "containerHeightMode": constants.TEXTBOX_DEFAULT_PLATFORM_HEIGHT,
@@ -48,8 +58,8 @@ function addWidgetsFrmCategories() {
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
-        "hExpand": true,
-        "margin": [0, 0, 0, 0],
+        "hExpand": false,
+        "margin": [0, 0, 2, 0],
         "padding": [0, 3, 0, 3],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "displayText": true,
@@ -97,7 +107,7 @@ function addWidgetsFrmCategories() {
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "layoutAlignment": constants.BOX_LAYOUT_ALIGN_FROM_LEFT,
-        "containerWeight": 45
+        "containerWeight": 83
     }, {});
     var segCategories = new kony.ui.SegmentedUI2({
         "id": "segCategories",
@@ -117,18 +127,18 @@ function addWidgetsFrmCategories() {
         "separatorRequired": true,
         "separatorThickness": 1,
         "separatorColor": "64646400",
-        "showScrollbars": false,
+        "showScrollbars": true,
         "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW,
         "groupCells": true,
-        "screenLevelWidget": true,
+        "screenLevelWidget": false,
         "onRowClick": FrmCategories_segCategories_onRowClick_seq0,
         "selectionBehavior": constants.SEGUI_SINGLE_SELECT_BEHAVIOR
     }, {
-        "margin": [0, 0, 0, 0],
-        "padding": [0, 0, 0, 0],
+        "margin": [2, 0, 2, 2],
+        "padding": [5, 5, 5, 5],
         "marginInPixel": false,
         "paddingInPixel": false,
-        "containerWeight": 45
+        "containerWeight": 83
     }, {});
     segCategoriesbox.add();
     FrmCategories.add(
@@ -140,11 +150,12 @@ function FrmCategoriesGlobals() {
     FrmCategories = new kony.ui.Form2({
         "id": "FrmCategories",
         "title": null,
-        "needAppMenu": true,
         "headers": [hbxHdrBBHeader],
         "enabledForIdleTimeout": false,
         "skin": "sknFrmBackground",
         "preShow": FrmCategories_FrmCategories_preshow_seq0,
+        "postShow": FrmCategories_FrmCategories_postshow_seq0,
+        "needAppMenu": true,
         "addWidgets": addWidgetsFrmCategories
     }, {
         "padding": [0, 0, 0, 0],
