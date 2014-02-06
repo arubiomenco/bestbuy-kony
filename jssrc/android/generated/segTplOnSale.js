@@ -9,12 +9,12 @@ function initializesegTplOnSale() {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
         "hExpand": true,
-        "margin": [0, 0, 0, 0],
+        "margin": [1, 0, 1, 0],
         "padding": [1, 1, 1, 1],
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "marginInPixel": false,
+        "marginInPixel": true,
         "paddingInPixel": false,
-        "containerWeight": 23
+        "containerWeight": 14
     }, {});
     var imgThumbnail = new kony.ui.Image2({
         "id": "imgThumbnail",
@@ -86,7 +86,7 @@ function initializesegTplOnSale() {
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
-        "containerWeight": 78,
+        "containerWeight": 70,
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
@@ -98,12 +98,29 @@ function initializesegTplOnSale() {
     }, {});
     vbox4847269009.add(
     lblName, lblPrice, lblRate);
+    var imgForward = new kony.ui.Image2({
+        "id": "imgForward",
+        "isVisible": true,
+        "src": "forward.png",
+        "imageWhenFailed": null,
+        "imageWhileDownloading": null
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_MIDDLE_RIGHT,
+        "margin": [0, 0, 1, 0],
+        "padding": [0, 0, 0, 0],
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_CROP,
+        "referenceWidth": null,
+        "referenceHeight": null,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "containerWeight": 8
+    }, {});
     var hbox4847269007 = new kony.ui.Box({
         "id": "hbox4847269007",
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
-        "containerWeight": 70,
+        "containerWeight": 44,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "margin": [0, 0, 0, 0],
@@ -114,7 +131,7 @@ function initializesegTplOnSale() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox4847269007.add(
-    imgThumbnail, vbox4847269009);
+    imgThumbnail, vbox4847269009, imgForward);
     var vbox4847269005 = new kony.ui.Box({
         "id": "vbox4847269005",
         "isVisible": true,
@@ -137,7 +154,7 @@ function initializesegTplOnSale() {
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
-        "containerWeight": 27,
+        "containerWeight": 43,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "margin": [0, 0, 0, 0],

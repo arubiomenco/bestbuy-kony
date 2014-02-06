@@ -87,10 +87,11 @@ function renderCategories(categoryInfo, results) {
 function updateBreadcrumb() {
     var size = breadcrumb.length;
     if (size > 0) {
-        FrmCategories.lblBreadcrumb.text = "";
+        var breadcrumbText = "";
         for (var i = 0; i < size; i++) {
-            FrmCategories.lblBreadcrumb.text += breadcrumb[i].catName + " > ";
+            breadcrumbText += breadcrumb[i].catName + " > ";
         }
+        FrmCategories.lblBreadcrumb.text = breadcrumbText;
     }
     showBackButton((size > 1));
 }
@@ -131,13 +132,4 @@ function getCachedSubcategories(categoryInfo) {
 
 function clearCachedSubcategories(categoryInfo) {
     kony.store.removeItem("cat_" + categoryInfo.catId);
-}
-
-function showBackButton(value) {
-    hbxHdrBBHeader.btnBack.setEnabled(value);
-    if (value) {
-        hbxHdrBBHeader.btnBack.skin = "sknBtnBack";
-    } else {
-        hbxHdrBBHeader.btnBack.skin = "sknBtnInvisible";
-    }
 }

@@ -18,9 +18,10 @@ sessionID = "";
 function appInit(params) {
     skinsInit();
     initializehdrBBHeader();
-    initializeftrBBFooter();
+    initializesegTplCategory();
     initializesegTplNormal();
     initializesegTplOnSale();
+    initializesegTplReview();
     FrmCategoriesGlobals();
     FrmProductDetailGlobals();
     FrmProductsGlobals();

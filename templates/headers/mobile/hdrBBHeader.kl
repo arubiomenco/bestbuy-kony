@@ -2022,7 +2022,7 @@
                     </xhtmlNormal>
                     <xhtmlNormal_override>false</xhtmlNormal_override>
                 </paddings>
-                <SText></SText>
+                <SText>Button</SText>
                 <overridePerferred>
                     <width>false</width>
                     <height>false</height>
@@ -2111,7 +2111,7 @@
                 <pb_blockedSkin>Skin Defaults</pb_blockedSkin>
                 <desktopWebToolTip></desktopWebToolTip>
                 <desktop_hoverskin>Skin Defaults</desktop_hoverskin>
-                <displayText>true</displayText>
+                <displayText>false</displayText>
                 <pressedSkin>sknBtnBackP</pressedSkin>
                 <blockedSkin>Skin Defaults</blockedSkin>
                 <showProgressIndicator>true</showProgressIndicator>
@@ -4728,17 +4728,23 @@
                 <parent_contentalignment>middle-center</parent_contentalignment>
                 <event_onClick>
                     <evtSequence>
-                        <actionList xsi:type="eventExpressionAction">
+                        <actionList xsi:type="eventFunctionAction">
                             <enabled>true</enabled>
                             <name></name>
-                            <type>5</type>
-                            <expr></expr>
-                            <exprMap>
+                            <type>6</type>
+                            <functionName>None</functionName>
+                            <functionNameMap>
                                 <entry>
                                     <key>js</key>
-                                    <value>kony.application.exit();</value>
+                                    <value>closeApplication</value>
                                 </entry>
-                            </exprMap>
+                            </functionNameMap>
+                            <paramDataMap>
+                                <entry>
+                                    <key>js</key>
+                                    <value/>
+                                </entry>
+                            </paramDataMap>
                         </actionList>
                         <enabled>true</enabled>
                         <seqname></seqname>
@@ -4802,7 +4808,7 @@
                 <pb_blockedSkin>Skin Defaults</pb_blockedSkin>
                 <desktopWebToolTip></desktopWebToolTip>
                 <desktop_hoverskin>Skin Defaults</desktop_hoverskin>
-                <displayText>true</displayText>
+                <displayText>false</displayText>
                 <pressedSkin>Skin Defaults</pressedSkin>
                 <blockedSkin>Skin Defaults</blockedSkin>
                 <showProgressIndicator>true</showProgressIndicator>

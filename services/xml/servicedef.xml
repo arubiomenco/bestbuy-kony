@@ -112,7 +112,7 @@
          <service-output>
             <dataset id="reviews" src="//reviews">
                <param datatype="string" format="None" formatvalue="" name="reviewer" sms-name="" src="review/reviewer/name" target="response"/>
-               <param datatype="number" format="None" formatvalue="" name="rating" sms-name="" src="review/rating" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="rating" sms-name="" src="review/rating" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="title" sms-name="" src="review/title" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="comment" sms-name="" src="review/comment" target="response"/>
             </dataset>

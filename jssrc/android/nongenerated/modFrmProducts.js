@@ -1,9 +1,13 @@
 var productSpec = {};
 var currentPage = 1;
-var totalPages = 0;
+var totalPages = 1;
 var inputInfo = null;
 
 function frmProducts_preShow() {
+    currentPage = 1;
+    totalPages = 1;
+    FrmProducts.segProducts.removeAll();
+    handleProductPagination();
     FrmProducts.lblInfo.text = "";
     showBackButton(true);
     var category = kony.store.getItem("category");
@@ -16,7 +20,7 @@ function frmProducts_preShow() {
     loadProducts(currentPage);
 }
 
-function loadProducts(page) {
+function loadProducts() {
     if (productSpec != null) {
         kony.print("Load Products: " + JSON.stringify(productSpec));
         var productCriteria = null;
@@ -31,7 +35,7 @@ function loadProducts(page) {
             channel: "rc",
             apiKey: apiKey,
             prodCriteria: productCriteria,
-            page: "" + page
+            page: "" + currentPage
         };
         kony.print(JSON.stringify(params));
         var info = {};
@@ -46,8 +50,9 @@ function callback_Products(status, results, info) {
     if (status == 400) {
         if (results.opstatus == 0) {
             kony.print(JSON.stringify(results));
-            //Todo: Handle Pagination
             if (results.total > 0) {
+                currentPage = results.currentPage;
+                totalPages = results.totalPages;
                 for (var i = 0; i < results.products.length; i++) {
                     if (results.products[i]["reviews"] != undefined && results.products[i]["reviews"] != null) {
                         if (results.products[i].reviews > 0) {
@@ -57,11 +62,9 @@ function callback_Products(status, results, info) {
                     if (results.products[i].onSale) {
                         results.products[i].template = hbxTplOnSale;
                         results.products[i].price = "$" + results.products[i].salePrice;
-                        results.products[i].onSaleTitle = "ON SALE!";
                     } else {
                         results.products[i].template = hbxTplNormal;
                         results.products[i].price = "$" + results.products[i].regularPrice;
-                        results.products[i].onSaleTitle = "";
                     }
                 }
                 FrmProducts.segProducts.setData(results.products);
@@ -69,12 +72,12 @@ function callback_Products(status, results, info) {
                     lblName: "name",
                     lblPrice: "price",
                     lblRate: "reviewInfo",
-                    imgThumbnail: "image",
-                    lblOnSale: "onSaleTitle"
+                    imgThumbnail: "image"
                 };
+                handleProductPagination();
             }
             //Update label info
-            setLabelInfo(results.total);
+            setProductsLabelInfo(results.total);
         } else {
             kony.print(JSON.stringify(results));
             alert("Error getting Products. Try again later");
@@ -82,7 +85,27 @@ function callback_Products(status, results, info) {
     }
 }
 
-function setLabelInfo(count) {
+function productNext_onClick() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        loadProducts();
+    }
+}
+
+function productPrevious_onClick() {
+    if (currentPage > 1) {
+        currentPage--;
+        loadProducts();
+    }
+}
+
+function segProducts_onClick() {
+    var selProduct = FrmProducts.segProducts.selectedItems[0];
+    FrmProductDetail.show();
+    setProductDetails(selProduct);
+}
+
+function setProductsLabelInfo(count) {
     if (count > 0) {
         if (productSpec.isSearch) {
             FrmProducts.lblInfo.text = "Results for: \"" + productSpec.searchFor + "\"";
@@ -96,4 +119,27 @@ function setLabelInfo(count) {
             FrmProducts.lblInfo.text = "There are no products in Category: " + productSpec.category.catName;
         }
     }
+}
+
+function handleProductPagination() {
+    FrmProducts.hbxFooter.isVisible = (totalPages > 1);
+    kony.print("btnNext Skin (Before): " + FrmProducts.btnNext.skin);
+    if (currentPage < totalPages) {
+        FrmProducts.btnNext.setEnabled(true);
+        FrmProducts.btnNext.skin = sknBtnNext;
+    } else {
+        FrmProducts.btnNext.setEnabled(false);
+        FrmProducts.btnNext.skin = sknBtnInvisible;
+    }
+    kony.print("btnNext Skin (After): " + FrmProducts.btnNext.skin);
+    kony.print("btnPrevious Skin (Before): " + FrmProducts.btnPrevious.skin);
+    if (currentPage > 1) {
+        FrmProducts.btnPrevious.setEnabled(true);
+        FrmProducts.btnPrevious.skin = sknBtnPrevious;
+    } else {
+        FrmProducts.btnPrevious.setEnabled(false);
+        FrmProducts.btnPrevious.skin = sknBtnInvisible;
+    }
+    kony.print("btnPrevious Skin (After): " + FrmProducts.btnPrevious.skin);
+    FrmProducts.lblPageInfo.text = "Page " + currentPage + " of " + totalPages;
 }

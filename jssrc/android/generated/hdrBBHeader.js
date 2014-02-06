@@ -4,7 +4,7 @@ function hdrBBHeader_btnBack_onClick_seq0(eventobject) {
 };
 
 function hdrBBHeader_btnExit_onClick_seq0(eventobject) {
-    kony.application.exit();
+    closeApplication.call(this);
 };
 
 function initializehdrBBHeader() {
@@ -30,7 +30,7 @@ function initializehdrBBHeader() {
         var btnBack = new kony.ui.Button({
             "id": "btnBack",
             "isVisible": true,
-            "text": null,
+            "text": "Button",
             "skin": "sknBtnInvisible",
             "focusSkin": "btnFocus",
             "onClick": hdrBBHeader_btnBack_onClick_seq0
@@ -41,7 +41,7 @@ function initializehdrBBHeader() {
             "margin": [0, 0, 0, 0],
             "padding": [0, 3, 0, 3],
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-            "displayText": true,
+            "displayText": false,
             "marginInPixel": false,
             "paddingInPixel": false,
             "containerWeight": 11
@@ -111,7 +111,7 @@ function initializehdrBBHeader() {
             "margin": [0, 0, 0, 0],
             "padding": [0, 3, 0, 3],
             "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-            "displayText": true,
+            "displayText": false,
             "marginInPixel": false,
             "paddingInPixel": false,
             "containerWeight": 11

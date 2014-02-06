@@ -11,7 +11,7 @@ function FrmCategories_btnSearch_onClick_seq0(eventobject) {
     search_onClick.call(this);
 };
 
-function FrmCategories_segCategories_onRowClick_seq0(eventobject, sectionNumber, rowNumber) {
+function FrmCategories_segCategories_onRowClick_seq0(eventobject, sectionNumber, rowNumber, selectedState) {
     segCategories_onClick.call(this);
 };
 
@@ -22,7 +22,7 @@ function addWidgetsFrmCategories() {
         "text": null,
         "secureTextEntry": false,
         "textInputMode": constants.TEXTBOX_INPUT_MODE_ANY,
-        "placeholder": null,
+        "placeholder": "Search",
         "autoCapitalize": constants.TEXTBOX_AUTO_CAPITALIZE_NONE,
         "skin": "sknTxtNormal",
         "focusSkin": "tbx2Focus",
@@ -40,7 +40,7 @@ function addWidgetsFrmCategories() {
         "containerWeight": 89
     }, {
         "autoFilter": false,
-        "viewType": constants.TEXTBOX_VIEW_TYPE_DEFAULT
+        "viewType": constants.TEXTBOX_VIEW_TYPE_SEARCH_VIEW
     });
     var btnSearch = new kony.ui.Button({
         "id": "btnSearch",
@@ -108,9 +108,12 @@ function addWidgetsFrmCategories() {
         "isVisible": true,
         "retainSelection": false,
         "widgetDataMap": {
-            "lblCategory": "lblCategory"
+            "lblCategory": "lblCategory",
+            "segTplCategory": "segTplCategory",
+            "hbxTplCategory": "hbxTplCategory",
+            "imgForward": "imgForward"
         },
-        "rowTemplate": segCategoriesbox,
+        "rowTemplate": hbxTplCategory,
         "widgetSkin": "sknSegNormal",
         "rowSkin": "seg2Normal",
         "rowFocusSkin": "seg2Focus",
@@ -122,7 +125,7 @@ function addWidgetsFrmCategories() {
         "groupCells": true,
         "screenLevelWidget": true,
         "onRowClick": FrmCategories_segCategories_onRowClick_seq0,
-        "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR,
+        "selectionBehavior": constants.SEGUI_SINGLE_SELECT_BEHAVIOR,
         "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW
     }, {
         "margin": [2, 2, 2, 2],
@@ -133,23 +136,7 @@ function addWidgetsFrmCategories() {
     }, {
         "dockSectionHeaders": false
     });
-    var lblCategory = new kony.ui.Label({
-        "id": "lblCategory",
-        "isVisible": true,
-        "skin": "sknLblCategory"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [3, 3, 3, 3],
-        "padding": [1, 1, 1, 1],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": false,
-        "paddingInPixel": false,
-        "containerWeight": 13
-    }, {});
-    segCategoriesbox.add(
-    lblCategory);
+    segCategoriesbox.add();
     FrmCategories.add(
     hbxSearch, lblBreadcrumb, segCategories);
 };

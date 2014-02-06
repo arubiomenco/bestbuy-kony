@@ -235,7 +235,7 @@ Overall, great TV... definitely recommend the purchase.&lt;/comment&gt;
         </outparam>
         <outparam>
             <category></category>
-            <datatype>number</datatype>
+            <datatype>string</datatype>
             <defaultvalue></defaultvalue>
             <description></description>
             <encode>true</encode>
