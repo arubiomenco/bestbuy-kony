@@ -4,7 +4,7 @@ function FrmProducts_FrmProducts_preshow_seq0(eventobject, neworientation) {
 };
 
 function FrmProducts_FrmProducts_postshow_seq0(eventobject, neworientation) {
-    loadProducts.call(this);
+    reloadProducts.call(this);
 };
 
 function FrmProducts_segProducts_onRowClick_seq0(eventobject, sectionNumber, rowNumber) {

@@ -4,23 +4,36 @@ var totalPages = 1;
 var inputInfo = null;
 
 function frmProducts_preShow(){
-	currentPage = 1;
-	totalPages = 1;
-	FrmProducts.segProducts.removeAll();
-	handleProductPagination ();
-	
-	FrmProducts.lblInfo.text = "";
+	if (productSpec == null || productSpec["category"] == undefined){
+		buildProductSpec();
+	}
 	
 	showBackButton ( true );
+	var cachedInfo = getCachedProducts();
+	if (cachedInfo != null){
+		kony.print ( "Loading products from Cache...");
+		currentPage = cachedInfo.currentPage;
+		totalPages = cachedInfo.totalPages;
+			
+		renderProducts( cachedInfo );
+	}else{
+		currentPage = 1;
+		totalPages = 1;
+		FrmProducts.lblInfo.text = "";
+		
+		FrmProducts.segProducts.removeAll();
+		handleProductPagination ();
+		loadProducts ( );
+	}
+}
+
+function buildProductSpec(){
 	var category = kony.store.getItem("category");
 	var searchFor = kony.store.getItem("search");
 
 	productSpec = { isSearch: (searchFor != null), 
 					category: category, 
 					searchFor: searchFor };
-	
-				
-	loadProducts ( );
 }
 
 function loadProducts ( ) {
@@ -33,7 +46,7 @@ function loadProducts ( ) {
 			productCriteria = "(categoryPath.id=" +productSpec.category.catId + ")";
 		}
 		
-		var params = { 	appID : "BestBuyKony", 
+		var params = { 	appID : appConfig.appId, 
 	    					serviceID : "BBProducts", 
 	    					channel : "rc",
 	    					apiKey: apiKey,
@@ -54,39 +67,67 @@ function callback_Products(status, results, info) {
 		if (results.opstatus == 0){
 			kony.print ( JSON.stringify( results ) );
 			
-			if (results.total > 0){
-				currentPage = results.currentPage;
-				totalPages = results.totalPages;
-				
-				for (var i = 0; i < results.products.length; i++){
-					if (results.products[i]["reviews"] != undefined && results.products[i]["reviews"] != null){
-						if (results.products[i].reviews > 0){
-							results.products[i].reviewInfo = "Avg Review: " + results.products[i].avgReview; 
-						}
-					}
-					
-					if (results.products[i].onSale){
-						results.products[i].template = hbxTplOnSale;
-						results.products[i].price = "$" + results.products[i].salePrice;
-					}else{
-						results.products[i].template = hbxTplProduct;
-						results.products[i].price = "$" + results.products[i].regularPrice;
-					}
-				}
-				
-				FrmProducts.segProducts.setData( results.products );
-				FrmProducts.segProducts.widgetDataMap = { lblName: "name", lblPrice: "price", lblRate: "reviewInfo", imgThumbnail: "image" };
-				
-				handleProductPagination();
-			}
-			//Update label info
-			setProductsLabelInfo (results.total);
+			setCachedProducts( results );
+			
+			renderProducts(results);
 		}else{
 			kony.print ( JSON.stringify( results ) );
 			alert ( "Error getting Products. Try again later" );
 		}
 	}
 }
+
+function reloadProducts(){
+	var cachedInfo = getCachedProducts();
+	if (cachedInfo != null){
+		currentPage = cachedInfo.currentPage;
+		totalPages = cachedInfo.totalPages;
+		
+		renderProducts( cachedInfo );
+	}else{
+		loadProducts();
+	}
+}
+
+function renderProducts( results ){
+	FrmProducts.segProducts.setVisibility( results.total > 0 );
+			
+	if (results.total > 0){
+		currentPage = results.currentPage;
+		totalPages = results.totalPages;
+		
+		for (var i = 0; i < results.products.length; i++){
+			if (results.products[i]["reviews"] != undefined && results.products[i]["reviews"] != null){
+				if (results.products[i].reviews > 0){
+					results.products[i].reviewInfo = "Avg Review: " + results.products[i].avgReview; 
+				}
+			}
+			
+			if (results.products[i].onSale){
+//#ifdef tabrcandroid
+				results.products[i].template = hbxTplOnSaleTablet;
+//#else
+				results.products[i].template = hbxTplOnSale;
+//#endif
+				results.products[i].price = "$" + results.products[i].salePrice;
+			}else{
+//#ifdef tabrcandroid
+				results.products[i].template = hbxTplProductTablet;
+//#else
+				results.products[i].template = hbxTplProduct;
+//#endif
+				results.products[i].price = "$" + results.products[i].regularPrice;
+			}
+		}
+		
+		FrmProducts.segProducts.setData( results.products );
+		FrmProducts.segProducts.widgetDataMap = { lblName: "name", lblPrice: "price", lblRate: "reviewInfo", imgThumbnail: "image" };
+		
+		handleProductPagination();
+	}
+	//Update label info
+	setProductsLabelInfo (results.total);
+} 
 
 
 function productNext_onClick(){
@@ -145,4 +186,17 @@ function handleProductPagination ( ){
 		FrmProducts.btnPrevious.skin = sknBtnInvisible;
 	}
 	FrmProducts.lblPageInfo.text = "Page " + currentPage + " of " + totalPages;
+}
+
+
+function getCachedProducts(){
+	return kony.store.getItem("cached_products");
+}
+
+function setCachedProducts( products ){
+	kony.store.setItem("cached_products", products);
+}
+
+function clearCachedProducts(){
+	kony.store.removeItem( "cached_products" );
 }

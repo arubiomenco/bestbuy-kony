@@ -3,18 +3,20 @@ var currentReviews = null;
 
 function frmProductDetails_preShow() {
     showBackButton(true);
-    FrmProductDetail.segReviews.setData([{
-        tittle: "",
-        submittedBy: "",
-        image: "",
-        comment: ""
-    }]);
-    FrmProductDetail.segReviews.widgetDataMap = {
-        lblTitle: "title",
-        lblSubmittedBy: "submittedBy",
-        imgAvgReview: "image",
-        lblComment: "comment"
-    };
+    if (kony.os.deviceInfo().name == "thinclient") {
+        FrmProductDetail.segReviews.setData([{
+            tittle: "",
+            submittedBy: "",
+            image: "",
+            comment: ""
+        }]);
+        FrmProductDetail.segReviews.widgetDataMap = {
+            lblTitle: "title",
+            lblSubmittedBy: "submittedBy",
+            imgAvgReview: "image",
+            lblComment: "comment"
+        };
+    }
 }
 
 function setProductDetails(productDetail) {
@@ -51,7 +53,7 @@ function loadReviews(product) {
     if (product != null) {
         kony.print("Load Reviews...");
         var params = {
-            appID: "BestBuyKony",
+            appID: appConfig.appId,
             serviceID: "BBReviews",
             channel: "rc",
             apiKey: apiKey,
@@ -72,7 +74,6 @@ function callback_Reviews(status, results, info) {
             FrmProductDetail.segReviews.setVisibility(true);
             kony.print(JSON.stringify(results));
             for (var i = 0; i < results.reviews.length; i++) {
-                results.reviews[i].template = hbxTplReviews;
                 results.reviews[i].submittedBy = "submitted by: " + results.reviews[i].reviewer;
                 results.reviews[i].image = getImageByReview(results.reviews[i].rating);
             }

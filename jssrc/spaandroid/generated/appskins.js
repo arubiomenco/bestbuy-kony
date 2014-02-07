@@ -79,4 +79,8 @@ function skinsInit() {
     sknFrmLoading = "sknFrmLoading";
     sknHbxOnSale = "sknHbxOnSale";
     sknLblUCantSeeMe = "sknLblUCantSeeMe";
+    sknVbxWhite = "sknVbxWhite";
+    sknLblWhite = "sknLblWhite";
+    sknScrollGreen = "sknScrollGreen";
+    sknScrollWhite = "sknScrollWhite";
 };

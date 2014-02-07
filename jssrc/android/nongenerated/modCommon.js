@@ -1,11 +1,11 @@
 function goBack() {
     var form = kony.application.getCurrentForm();
-    kony.print("Current form: " + form.id);
     if (form.id == "FrmCategories") {
         categoriesGoBack();
     } else if (form.id == "FrmProductDetail") {
         FrmProducts.show();
     } else if (form.id == "FrmProducts") {
+        clearCachedProducts();
         FrmCategories.show();
     } else if (form.id == "FrmImages") {
         FrmProductDetail.show();
@@ -32,11 +32,12 @@ function handleCloseApp(response) {
 }
 
 function showBackButton(value) {
-    hbxHdrBBHeader.btnBack.setEnabled(value);
+    var header = hbxHdrBBHeader;
+    header.btnBack.setEnabled(value);
     if (value) {
-        hbxHdrBBHeader.btnBack.skin = sknBtnBack;
+        header.btnBack.skin = sknBtnBack;
     } else {
-        hbxHdrBBHeader.btnBack.skin = sknBtnInvisible;
+        header.btnBack.skin = sknBtnInvisible;
     }
 }
 

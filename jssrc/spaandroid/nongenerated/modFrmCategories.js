@@ -24,7 +24,7 @@ function loadCategories(category) {
         renderCategories(categoryInfo, cachedData);
     } else {
         var params = {
-            appID: "BestBuyKony",
+            appID: appConfig.appId,
             serviceID: "BBCategories",
             channel: "rc",
             apiKey: apiKey,
@@ -57,6 +57,7 @@ function search_onClick() {
     var searchFor = FrmCategories.txtSearch.text;
     if (searchFor != null && searchFor.trim() != "") {
         clearCurrentCategory();
+        clearCachedProducts();
         kony.store.setItem("search", searchFor);
         FrmProducts.show();
     }
